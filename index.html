@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Drop Muyenga | Work. Eat. Connect.</title>
+  <link preconnect href="https://fonts.googleapis.com"> 
+  <link preconnect href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo" onclick="showPage('home')">The Drop <span>Muyenga</span></div>
+    <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a onclick="showPage('home')" id="homeLink">Home</a></li>
+      <li><a onclick="showPage('menu')" id="menuLink">Menu</a></li>
+      <li><a onclick="showPage('home'); setTimeout(() => document.getElementById('about')?.scrollIntoView({behavior:'smooth'}), 150)">About</a></li>
+      <li><a onclick="showPage('home'); setTimeout(() => document.getElementById('offer')?.scrollIntoView({behavior:'smooth'}), 150)">Offer</a></li>
+      <li><a onclick="showPage('home'); setTimeout(() => document.getElementById('location')?.scrollIntoView({behavior:'smooth'}), 150)">Location</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="home-page">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Work. Eat. Connect.</h1>
+      <p>A social hub with co‑working, three restaurants, an ice cream parlour & a purpose.</p>
+      <div class="hero-buttons">
+        <button onclick="showPage('menu')" class="btn btn-primary">View Full Menu</button>
+        <a href="https://wa.me/256779163105?text=Hello%20The%20Drop%2C%20I'd%20like%20to%20book%20a%20desk%20or%20place%20an%20order" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">More than a venue</h2>
+      <div class="two-col">
+        <div class="col">
+          <p style="font-size:1.1rem; margin-bottom:1.2rem; color:#C4BBA8;">The Drop Muyenga is built on community, inclusivity, and real change. Located on Tank Hill Road, we bring together co‑working, bold flavours, and a social mission that matters.</p>
+          <p style="background: #2A241C; padding: 1rem; border-radius: 16px; border-left: 4px solid #D98C2B;"><strong style="color:#D98C2B;">Every meal & desk booking helps provide safe water to Ugandan communities.</strong> Majority of our profits are reinvested into water sanitation & hygiene (WASH) projects with <strong style="color:#8BAA6B;">SPOUTS Impact</strong>.</p>
+        </div>
+        <div class="col">
+          <img src="IMAGE/La-Cabana.jpg" alt="Veiw of the Restaraut" style="width:100%; border-radius: 20px; border: 1px solid #3D3529;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer" style="background: #161311;">
+    <div class="container">
+      <h2 class="section-title">What we offer</h2>
+      <div class="offer-grid">
+        <div class="offer-card"><i class="fas fa-laptop"></i><h3>Co‑working</h3><p>High‑speed WiFi, printing, day passes, quiet zone & meeting room.</p></div>
+        <div class="offer-card"><i class="fas fa-utensils"></i><h3>3 Restaurants</h3><p><strong>Linove</strong> · <strong>Mawaal</strong> · <strong>Bwana Samaki</strong><br>African, fusion & seafood.</p></div>
+        <div class="offer-card"><i class="fas fa-cocktail"></i><h3>Bar & Ice Cream</h3><p>Signature cocktails, craft beers, milkshakes and artisan ice cream.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY PARTNERS -->
+  <section>
+    <div class="container">
+      <h2 class="section-title" style="text-align: center;">Order for delivery</h2>
+      <div class="delivery-row">
+        <a href="https://glovoapp.com/ug" target="_blank" class="delivery-btn"><i class="fas fa-motorcycle"></i> Glovo</a>
+        <a href="https://www.jumia.ug/food" target="_blank" class="delivery-btn"><i class="fas fa-shopping-bag"></i> Jumia Food</a>
+        <a href="https://wa.me/256779163105?text=I'd%20like%20to%20place%20an%20order" target="_blank" class="delivery-btn"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVE A DESK FORM -->
+ <form target="_blank" action="https://formsubmit.co/markkasibante19@gmail.com" method="POST">
+  <section id="reserve" style="background: #161311;">
+    <div class="container">
+      <h2 class="section-title" style="text-align: center;">Reserve a Desk</h2>
+      <div class="reserve-form">
+        <h3>Book your workspace</h3>
+        <form id="reserveForm">
+         <div class="form-group">
+  <label>Full Name</label>
+  <input type="text" name="Full Name" placeholder="Your name" required>
+</div>
+<div class="form-group">
+  <label>Email</label>
+  <input type="email" name="Email" placeholder="your@email.com" required>
+</div>
+<div class="form-group">
+  <label>Phone Number</label>
+  <input type="tel" name="Phone Number" placeholder="0779 163105" required>
+</div>
+<div class="form-group">
+  <label>Date</label>
+  <input type="date" name="Date" required>
+</div>
+<div class="form-group">
+  <label>Time</label>
+  <select name="Time">
+    <option>9:00 AM</option>
+    <option>10:00 AM</option>
+    <option>11:00 AM</option>
+    <option>12:00 PM</option>
+    <option>1:00 PM</option>
+    <option>2:00 PM</option>
+    <option>3:00 PM</option>
+    <option>4:00 PM</option>
+    <option>5:00 PM</option>
+    <option>6:00 PM</option>
+  </select>
+</div>
+<div class="form-group">
+  <label>How many people?</label>
+  <select name="Number of Guests">
+    <option>1 person</option>
+    <option>2 people</option>
+    <option>3 people</option>
+    <option>4 people</option>
+    <option>5 people</option>
+    <option>6+ people</option>
+  </select>
+</div>
+<div class="form-group">
+  <label>Special requests (optional)</label>
+  <textarea name="Special Requests" rows="2" placeholder="Any special requirements..."></textarea>
+</div>
+<button type="submit">Request Booking</button>
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: #6B6356;">We'll confirm within 2 hours via WhatsApp or call</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="container">
+      <h2 class="section-title">Visit us</h2>
+      <div class="info-grid">
+        <div class="info-card"><i class="far fa-clock"></i><h3>Hours</h3><p>Mon – Sun<br>8:00 AM – 12:00 AM</p></div>
+        <div class="info-card"><i class="fas fa-phone-alt"></i><h3>Call us</h3><p><a href="tel:+256779163105">0779 163105</a><br><a href="tel:+256709737835">0709 737835</a></p></div>
+        <div class="info-card"><i class="fab fa-whatsapp"></i><h3>WhatsApp</h3><p><a href="https://wa.me/256779163105" target="_blank">Chat with us →</a></p></div>
+        <div class="info-card"><i class="fas fa-map-marker-alt"></i><h3>Location</h3><p>Tank Hill Rd, Muyenga, Kampala</p></div>
+      </div>
+      <div class="map-container">
+        <iframe width="100%" height="300" style="border:0;" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Tank+Hill+Rd+Muyenga+Kampala&zoom=15"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="newsletter">
+        <h3>Stay updated</h3>
+        <p>Events, new dishes & impact stories — straight to your inbox.</p>
+        <form id="subscribeForm"><input type="email" placeholder="Your email address" required><button type="submit">Subscribe</button></form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- MENU PAGE -->
+<div id="menuPage" class="menu-page">
+  <section class="menu-header">
+    <div class="container">
+      <h1>Our Menu</h1>
+      <p>Fresh. Flavorful. Made for you.</p>
+      <div class="delivery-row" style="margin-top: 1.5rem;">
+        <a href="https://glovoapp.com/ug" target="_blank" class="delivery-btn"><i class="fas fa-motorcycle"></i> Order on Glovo</a>
+        <a href="https://www.jumia.ug/food" target="_blank" class="delivery-btn"><i class="fas fa-shopping-bag"></i> Jumia Food</a>
+        <a href="https://wa.me/256779163105" target="_blank" class="delivery-btn"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="category"><h2>🍢 Appetizers</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&auto=format" alt="Samosas"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef / Chicken Samosas</div><div class="menu-card-desc">4 pieces, crispy pastry</div></div><div class="menu-card-price">13,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&auto=format" alt="Spring Rolls"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Spring Rolls</div><div class="menu-card-desc">4 mini veg rolls</div></div><div class="menu-card-price">12,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="IMAGE/final p.webp" alt="Chicken ramadhan combo"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Chicken Ramadhan Combo</div><div class="menu-card-desc">Biryani, samosas, fruit salad + juice</div></div><div class="menu-card-price">40,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🍛 Local</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&auto=format" alt="Beef Pilau"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef Pilau</div><div class="menu-card-desc">Spiced rice with tender beef</div></div><div class="menu-card-price">22,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="IMAGE/web fish.webp" alt="Grilled Tilapia"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Grilled Tilapia </div><div class="menu-card-desc">Hearty chicken stew + 3 sides</div></div><div class="menu-card-price">28,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&auto=format" alt="Beef Stew"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef Stew</div><div class="menu-card-desc">Delicious beef stew + 3 sides</div></div><div class="menu-card-price">20,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🍔 Smash Burgers</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&auto=format" alt="Classic Smash Burger"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Classic Smash Burger</div><div class="menu-card-desc">Beef patty, cheddar, lettuce, tomato, onion, mayo</div></div><div class="menu-card-price">32,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format" alt="Chicken Smash"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Chicken Smash Burger</div><div class="menu-card-desc">Grilled chicken, lettuce, tomato, onion, mayo</div></div><div class="menu-card-price">32,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format" alt="Bacon Burger"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Bacon Cheese Burger</div><div class="menu-card-desc">Beef patty, bacon, cheddar cheese</div></div><div class="menu-card-price">30,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🌮 Tacos</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&auto=format" alt="Beef Taco"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef Taco</div><div class="menu-card-desc">Grilled beef, guacamole, salsa</div></div><div class="menu-card-price">8,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&auto=format" alt="Chicken Taco"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Chicken Taco</div><div class="menu-card-desc">Grilled chicken, guacamole, salsa</div></div><div class="menu-card-price">8,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=400&auto=format" alt="Veggie Taco"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Veggie Taco</div><div class="menu-card-desc">Zucchini, mushroom, guacamole, salsa</div></div><div class="menu-card-price">8,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🍕 Pizza</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format" alt="Margherita"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Margherita Pizza</div><div class="menu-card-desc">Tomato sauce, basil, mozzarella</div></div><div class="menu-card-price">20,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&auto=format" alt="Hawaiian"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Hawaiian Pizza</div><div class="menu-card-desc">Ham/chicken, pineapple, mozzarella</div></div><div class="menu-card-price">38,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400&auto=format" alt="Nyama Lovers"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Nyama Lovers Pizza</div><div class="menu-card-desc">Beef, chicken, sausages, peppers</div></div><div class="menu-card-price">38,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🌯 Wraps</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&auto=format" alt="Chicken Wrap"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Chicken Funky Wrap</div><div class="menu-card-desc">Crispy tortilla, chicken, avocado, cheese + chips</div></div><div class="menu-card-price">28,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&auto=format" alt="Beef Wrap"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef Wrap</div><div class="menu-card-desc">Beef, lettuce, avocado, cheese + chips</div></div><div class="menu-card-price">25,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="IMAGE/OIP (1).webp" alt="Veggie Wrap"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Veggie Wrap</div><div class="menu-card-desc">Mixed vegetables, avocado, cheese + chips</div></div><div class="menu-card-price">20,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🍗 Wings</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400&auto=format" alt="Buffalo Wings"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Boneless Buffalo Wings</div><div class="menu-card-desc">6pcs + chips</div></div><div class="menu-card-price">25,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&auto=format" alt="Wings Platter"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Wings Platter</div><div class="menu-card-desc">15pcs mix of wet & dry + chips</div></div><div class="menu-card-price">55,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&auto=format" alt="Lollipops"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Chicken Lollipops</div><div class="menu-card-desc">6pcs + chips</div></div><div class="menu-card-price">28,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🍝 Pasta</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=400&auto=format" alt="Bolognese"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Spaghetti Bolognese</div><div class="menu-card-desc">Traditional meat sauce</div></div><div class="menu-card-price">30,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&auto=format" alt="Lasagna"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Beef Lasagna</div><div class="menu-card-desc">Italian ragu meat sauce</div></div><div class="menu-card-price">40,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&auto=format" alt="Pesto Pollo"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Tagliatelle Pesto Pollo</div><div class="menu-card-desc">Creamy pesto with grilled chicken</div></div><div class="menu-card-price">36,000 UGX</div></div></div>
+      </div>
+    </div>
+
+    <div class="category"><h2>🥤 Drinks & Milkshakes</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&auto=format" alt="Milkshake"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Oreo Milkshake</div><div class="menu-card-desc">Creamy oreo bliss</div></div><div class="menu-card-price">18,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&auto=format" alt="Coffee"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Cappuccino</div><div class="menu-card-desc">Rich and creamy</div></div><div class="menu-card-price">10,000 UGX</div></div></div>
+        <div class="menu-card"><img class="menu-card-img" src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&auto=format" alt="Fresh Juice"><div class="menu-card-content"><div class="menu-card-info"><div class="menu-card-name">Fresh Fruit Juice</div><div class="menu-card-desc">Watermelon, passion, mango, or pineapple</div></div><div class="menu-card-price">12,000 UGX</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="social-icons">
+    <a href="https://instagram.com/the.dropkla" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com/TheDROPkampala" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://wa.me/256779163105" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>© The Drop Muyenga — Powered by purpose. Profits support clean water with SPOUTS Impact 💧</p>
+  <p style="margin-top: 0.5rem; font-size: 0.7rem;">Order via Glovo • Jumia Food • WhatsApp</p>
+</footer>
+
+<script>
+  function showPage(page) {
+    const homePage = document.getElementById('homePage');
+    const menuPage = document.getElementById('menuPage');
+    const homeLink = document.getElementById('homeLink');
+    const menuLink = document.getElementById('menuLink');
+    
+    if (page === 'home') {
+      homePage.style.display = 'block';
+      menuPage.style.display = 'none';
+      if (homeLink) homeLink.classList.add('active');
+      if (menuLink) menuLink.classList.remove('active');
+    } else {
+      homePage.style.display = 'none';
+      menuPage.style.display = 'block';
+      if (homeLink) homeLink.classList.remove('active');
+      if (menuLink) menuLink.classList.add('active');
+    }
+    
+    const nav = document.getElementById('nav-links');
+    if (nav) nav.classList.remove('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  showPage('home');
+  
+  const mobileBtn = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+  }
+  
+  document.getElementById('subscribeForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thanks for subscribing! You\'ll hear from us soon.');
+    e.target.reset();
+  });
+  
+  document.getElementById('reserveForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you! We\'ll confirm your desk booking within 2 hours via WhatsApp.');
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
